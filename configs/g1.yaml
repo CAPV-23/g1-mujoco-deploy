@@ -1,0 +1,38 @@
+# Paths (UPDATED for portable repo)
+policy_path: ./policies/motion.pt
+xml_path: ./models/g1_description/scene.xml
+
+# Total simulation time
+simulation_duration: 60.0
+
+# Simulation time step
+simulation_dt: 0.002
+
+# Controller update frequency (50 Hz)
+control_decimation: 10
+
+# PD gains
+kps: [100, 100, 100, 150, 40, 40, 100, 100, 100, 150, 40, 40]
+kds: [2, 2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2]
+
+# Default joint angles
+default_angles: [-0.1,  0.0,  0.0,  0.3, -0.2, 0.0,
+                 -0.1,  0.0,  0.0,  0.3, -0.2, 0.0]
+
+# Observation scaling
+ang_vel_scale: 0.25
+dof_pos_scale: 1.0
+dof_vel_scale: 0.05
+
+# Action scaling
+action_scale: 0.25
+
+# Command scaling
+cmd_scale: [2.0, 2.0, 0.25]
+
+# Sizes
+num_actions: 12
+num_obs: 47
+
+# Initial command
+cmd_init: [0.5, 0, 0]
